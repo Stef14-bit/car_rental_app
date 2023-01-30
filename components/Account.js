@@ -65,7 +65,7 @@ export default function Account({ session }) {
   }
 
   return (
-    <div className="form-widget">
+    <div className="bg-slate-400">
       <Avatar
         uid={user.id}
         url={avatar_url}
@@ -75,13 +75,20 @@ export default function Account({ session }) {
           updateProfile({ username, website, avatar_url: url });
         }}
       />
-      <div>
+      <div className="bg-transparent">
         <label htmlFor="email">Email</label>
-        <input id="email" type="text" value={session.user.email} disabled />
+        <input
+          className="bg-transparent"
+          id="email"
+          type="text"
+          value={session.user.email}
+          disabled
+        />
       </div>
       <div>
         <label htmlFor="username">Username</label>
         <input
+          className="bg-transparent"
           id="username"
           type="text"
           value={username || ""}
@@ -91,6 +98,7 @@ export default function Account({ session }) {
       <div>
         <label htmlFor="website">Website</label>
         <input
+          className="bg-transparent"
           id="website"
           type="website"
           value={website || ""}

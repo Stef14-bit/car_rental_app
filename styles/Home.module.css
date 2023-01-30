@@ -1,19 +1,5 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: var(--custom-font-family);
-  background-color: var(--custom-bg-color);
-}
-
-* {
+html {
   box-sizing: border-box;
-}
-
-html,
-body,
-#__next {
   height: 100vh;
   width: 100vw;
-  overflow-x: hidden;
 }

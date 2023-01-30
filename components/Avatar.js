@@ -56,12 +56,12 @@ export default function Avatar({ uid, url, size, onUpload }) {
   };
 
   return (
-    <div>
+    <div className="w-full">
       {avatarUrl ? (
         <img
           src={avatarUrl}
           alt="Avatar"
-          className="avatar image"
+          className=""
           style={{ height: size, width: size }}
         />
       ) : (
