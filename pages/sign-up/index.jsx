@@ -1,6 +1,7 @@
 import { Auth, ThemeSupa } from "@supabase/auth-ui-react";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
-import Account from "@/components/Account";
+import MobileNavbar from "@/components/MobileNavbar";
+import Link from "next/link";
 
 const Home = () => {
   const session = useSession();
@@ -18,8 +19,9 @@ const Home = () => {
           />
         </div>
       ) : (
-        <Account session={session} />
+        <Link href="/profile">Redirect to profile</Link>
       )}
+      <MobileNavbar />
     </div>
   );
 };
