@@ -3,7 +3,7 @@ import React from "react";
 
 function MobileNavbar() {
   return (
-    <div>
+    <div className="bg-slate-400 absolute bottom-0 left-0 flex justify-around items-center w-full h-20 ">
       <Link href="/location-search">
         <button>Search Loc</button>
       </Link>
