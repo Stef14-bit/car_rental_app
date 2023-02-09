@@ -7,8 +7,8 @@ import Link from "next/link";
 function Profile() {
   const session = useSession();
   return (
-    <>
-      <div>
+    <div className="h-4/5 flex justify-center">
+      <div className="flex justify-center content-center">
         {!session ? (
           <h3>
             Signup to access page
@@ -23,7 +23,7 @@ function Profile() {
         )}
       </div>
       <MobileNavbar />
-    </>
+    </div>
   );
 }
 

@@ -61,7 +61,7 @@ export default function Avatar({ uid, url, size, onUpload }) {
         <img
           src={avatarUrl}
           alt="Avatar"
-          className=""
+          className="rounded-md"
           style={{ height: size, width: size }}
         />
       ) : (
@@ -71,7 +71,7 @@ export default function Avatar({ uid, url, size, onUpload }) {
         />
       )}
       <div>
-        <label className="button primary block" htmlFor="single">
+        <label className="button primary " htmlFor="single">
           {uploading ? "Uploading ..." : "Upload"}
         </label>
         <input
