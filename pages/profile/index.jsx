@@ -11,13 +11,12 @@ function Profile() {
       <div>
         {!session ? (
           <h3>
-            You need to{" "}
+            Signup to access page
             <Link href="/sign-up">
               <button className="bg-lime-600 p-2 rounded-md absolute top-8 right-8">
                 Signup
               </button>
             </Link>{" "}
-            to access page
           </h3>
         ) : (
           <Account session={session} />
