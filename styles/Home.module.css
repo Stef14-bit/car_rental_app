@@ -1,19 +1,6 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: var(--custom-font-family);
-  background-color: var(--custom-bg-color);
-}
-
 * {
   box-sizing: border-box;
-}
-
-html,
-body,
-#__next {
   height: 100vh;
+  height: 100dvh;
   width: 100vw;
-  overflow-x: hidden;
 }

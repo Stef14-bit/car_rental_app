@@ -65,32 +65,51 @@ export default function Account({ session }) {
   }
 
   return (
-    <div className="form-widget">
-      <Avatar
-        uid={user.id}
-        url={avatar_url}
-        size={150}
-        onUpload={(url) => {
-          setAvatarUrl(url);
-          updateProfile({ username, website, avatar_url: url });
-        }}
-      />
-      <div>
-        <label htmlFor="email">Email</label>
-        <input id="email" type="text" value={session.user.email} disabled />
-      </div>
-      <div>
-        <label htmlFor="username">Username</label>
+    <div className="flex flex-col items-center justify-between">
+      <div className="font-thin text-3xl  relative top-12 left-5">
+        <label htmlFor="username"></label>
         <input
+          className="bg-transparent"
           id="username"
           type="text"
           value={username || ""}
           onChange={(e) => setUsername(e.target.value)}
         />
       </div>
+
       <div>
-        <label htmlFor="website">Website</label>
+        <Avatar
+          uid={user.id}
+          url={avatar_url}
+          size={200}
+          onUpload={(url) => {
+            setAvatarUrl(url);
+            updateProfile({ username, website, avatar_url: url });
+          }}
+        />
+        <button
+          className="button primary"
+          onClick={() => updateProfile({ username, website, avatar_url })}
+          disabled={loading}>
+          {loading ? "Loading ..." : "Update"}
+        </button>
+      </div>
+      <div className="font-thin text-2xl  relative ">
+        <label htmlFor="email">Email : </label>
         <input
+          className="bg-transparent"
+          id="email"
+          type="text"
+          value={session.user.email}
+          h
+          disabled
+        />
+      </div>
+
+      <div className="font-thin text-2xl relative left-5">
+        <label htmlFor="website">Website : </label>
+        <input
+          className="bg-transparent"
           id="website"
           type="website"
           value={website || ""}
@@ -100,16 +119,7 @@ export default function Account({ session }) {
 
       <div>
         <button
-          className="button primary block"
-          onClick={() => updateProfile({ username, website, avatar_url })}
-          disabled={loading}>
-          {loading ? "Loading ..." : "Update"}
-        </button>
-      </div>
-
-      <div>
-        <button
-          className="button block"
+          className="text-red-600"
           onClick={() => supabase.auth.signOut()}>
           Sign Out
         </button>

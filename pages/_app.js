@@ -7,11 +7,14 @@ function MyApp({ Component, pageProps }) {
   const [supabase] = useState(() => createBrowserSupabaseClient());
 
   return (
-    <SessionContextProvider
-      supabaseClient={supabase}
-      initialSession={pageProps.initialSession}>
-      <Component {...pageProps} />
-    </SessionContextProvider>
+    <div className="h-screen bg-gradient-to-b from-slate-400 to-slate-200">
+      {" "}
+      <SessionContextProvider
+        supabaseClient={supabase}
+        initialSession={pageProps.initialSession}>
+        <Component {...pageProps} />
+      </SessionContextProvider>
+    </div>
   );
 }
 export default MyApp;
