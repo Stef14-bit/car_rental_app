@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { useUser, useSupabaseClient } from '@supabase/auth-helpers-react';
-import Avatar from './Avatar';
+import { useState, useEffect } from "react";
+import { useUser, useSupabaseClient } from "@supabase/auth-helpers-react";
+import Avatar from "./Avatar";
 
 export default function Account({ session }) {
   const supabase = useSupabaseClient();
@@ -19,9 +19,9 @@ export default function Account({ session }) {
       setLoading(true);
 
       let { data, error, status } = await supabase
-        .from('profiles')
+        .from("profiles")
         .select(`username, website, avatar_url`)
-        .eq('id', user.id)
+        .eq("id", user.id)
         .single();
 
       if (error && status !== 406) {
@@ -34,7 +34,7 @@ export default function Account({ session }) {
         setAvatarUrl(data.avatar_url);
       }
     } catch (error) {
-      alert('Error loading user data!');
+      alert("Error loading user data!");
       console.log(error);
     } finally {
       setLoading(false);
@@ -53,11 +53,11 @@ export default function Account({ session }) {
         updated_at: new Date().toISOString(),
       };
 
-      let { error } = await supabase.from('profiles').upsert(updates);
+      let { error } = await supabase.from("profiles").upsert(updates);
       if (error) throw error;
-      alert('Profile updated!');
+      alert("Profile updated!");
     } catch (error) {
-      alert('Error updating the data!');
+      alert("Error updating the data!");
       console.log(error);
     } finally {
       setLoading(false);
@@ -72,7 +72,7 @@ export default function Account({ session }) {
           className="bg-transparent"
           id="username"
           type="text"
-          value={username || ''}
+          value={username || ""}
           onChange={(e) => setUsername(e.target.value)}
         />
       </div>
@@ -81,19 +81,19 @@ export default function Account({ session }) {
         <Avatar
           uid={user.id}
           url={avatar_url}
-          size={200}
           onUpload={(url) => {
             setAvatarUrl(url);
             updateProfile({ username, website, avatar_url: url });
           }}
         />
-        <button
-          className="button primary"
+      </div>
+      <div>
+        <div
+          className="p-2 bg-lime-500 text-white rounded-md"
           onClick={() => updateProfile({ username, website, avatar_url })}
-          disabled={loading}
-        >
-          {loading ? 'Loading ...' : 'Update'}
-        </button>
+          disabled={loading}>
+          {loading ? "Loading ..." : "Update Profile picture"}
+        </div>
       </div>
       <div className="font-thin text-2xl  relative ">
         <label htmlFor="email">Email : </label>
@@ -113,7 +113,7 @@ export default function Account({ session }) {
           className="bg-transparent"
           id="website"
           type="website"
-          value={website || ''}
+          value={website || ""}
           onChange={(e) => setWebsite(e.target.value)}
         />
       </div>
@@ -121,8 +121,7 @@ export default function Account({ session }) {
       <div>
         <button
           className="text-red-600"
-          onClick={() => supabase.auth.signOut()}
-        >
+          onClick={() => supabase.auth.signOut()}>
           Sign Out
         </button>
       </div>
