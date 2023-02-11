@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { useUser, useSupabaseClient } from "@supabase/auth-helpers-react";
+import React, { useState, useEffect } from 'react';
+import { useUser, useSupabaseClient } from '@supabase/auth-helpers-react';
 
 function TopInfo({ session }) {
   const supabase = useSupabaseClient();
@@ -16,9 +16,9 @@ function TopInfo({ session }) {
       setLoading(true);
 
       let { data, error, status } = await supabase
-        .from("profiles")
+        .from('profiles')
         .select(`avatar_url`)
-        .eq("id", user.id)
+        .eq('id', user.id)
         .single();
 
       if (error && status !== 406) {
@@ -29,7 +29,7 @@ function TopInfo({ session }) {
         setAvatarUrl(data.avatar_url);
       }
     } catch (error) {
-      alert("Error loading user data!");
+      alert('Error loading user data!');
       console.log(error);
     } finally {
       setLoading(false);
@@ -39,14 +39,15 @@ function TopInfo({ session }) {
   return (
     <div className="p-8 flex items-center flex-row justify-between ">
       <div className="bg-white h-12 w-12 rounded-md flex items-center justify-center">
-        {" "}
+        {' '}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 23 23"
           stroke-width="1.5"
           stroke="currentColor"
-          class="w-6 h-6">
+          class="w-6 h-6"
+        >
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -64,10 +65,24 @@ function TopInfo({ session }) {
         <h3 className="text-xl">Location</h3>
       </div>
       <div className="bg-white h-12 w-12 rounded-md flex items-center justify-center">
-        {avatar_url ? (
+        {!avatar_url ? (
           <img href={avatar_url} alt="Avatar" />
         ) : (
-          <div className="avatar no-image" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            {' '}
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+            />{' '}
+          </svg>
         )}
       </div>
     </div>

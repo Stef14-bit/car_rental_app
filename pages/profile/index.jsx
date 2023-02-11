@@ -1,8 +1,8 @@
-import MobileNavbar from "@/components/MobileNavbar";
-import React from "react";
-import { useSession } from "@supabase/auth-helpers-react";
-import Account from "@/components/Account";
-import Link from "next/link";
+import MobileNavbar from '@/components/MobileNavbar';
+import React from 'react';
+import { useSession } from '@supabase/auth-helpers-react';
+import Account from '@/components/Account';
+import Link from 'next/link';
 
 function Profile() {
   const session = useSession();
@@ -16,7 +16,7 @@ function Profile() {
               <button className="bg-lime-600 p-2 rounded-md absolute top-8 right-8">
                 Signup
               </button>
-            </Link>{" "}
+            </Link>{' '}
           </h3>
         ) : (
           <Account session={session} />
