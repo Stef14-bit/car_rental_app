@@ -2,6 +2,7 @@ const data = [
   {
     id: 1,
     location: 'Berlin',
+    price: 150,
     make: 'Audi',
     model: 'A6',
     model_year: 2016,
@@ -17,6 +18,7 @@ const data = [
   {
     id: 2,
     location: 'Paris',
+    price: 100,
     make: 'Toyota',
     model: 'Camry',
     model_year: 2020,
@@ -32,6 +34,7 @@ const data = [
   {
     id: 3,
     location: 'Bucuresti',
+    price: 100,
     make: 'BMW',
     model: 'M3',
     model_year: 2019,
