@@ -81,18 +81,19 @@ export default function Account({ session }) {
         <Avatar
           uid={user.id}
           url={avatar_url}
-          size={200}
           onUpload={(url) => {
             setAvatarUrl(url);
             updateProfile({ username, website, avatar_url: url });
           }}
         />
-        <button
-          className="button primary"
+      </div>
+      <div>
+        <div
+          className="p-2 bg-lime-500 text-white rounded-md"
           onClick={() => updateProfile({ username, website, avatar_url })}
           disabled={loading}>
-          {loading ? "Loading ..." : "Update"}
-        </button>
+          {loading ? "Loading ..." : "Update Profile picture"}
+        </div>
       </div>
       <div className="font-thin text-2xl  relative ">
         <label htmlFor="email">Email : </label>
