@@ -10,7 +10,7 @@ const CarList = () => {
           <CarCard
             category={el.category}
             carImage={
-              'https://file.naijauto.com/2018/04/12/gf7sN3IA/funny-car-09-489e.jpg'
+              'https://seeklogo.com/images/L/line-art-car-logo-99DBB62CB3-seeklogo.com.png'
             }
             make={el.make}
             model={el.model}

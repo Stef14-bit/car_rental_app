@@ -14,7 +14,7 @@ const data = [
     plate_number: 'B 69 STF',
     rate: '4',
     starus: 'available',
-    horsepower: '313 hp',
+    horsepower: '313',
     owner: 'Isus',
   },
   {
@@ -32,7 +32,7 @@ const data = [
     plate_number: 'B 12 BLN',
     rate: '4',
     starus: 'available',
-    horsepower: '180 hp',
+    horsepower: '180',
     owner: 'Marius',
   },
   {
@@ -50,7 +50,7 @@ const data = [
     plate_number: 'B 10 BOS',
     rate: '3,5',
     starus: 'available',
-    horsepower: '350 hp',
+    horsepower: '350',
     owner: 'Iuda',
   },
 ];
