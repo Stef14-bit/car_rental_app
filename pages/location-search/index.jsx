@@ -19,10 +19,10 @@ function Location() {
         type="search"
         placeholder="choose location"
       />
-      <h3 class="mb-3 text-xl text-gray-600">Top Location</h3>
-      {data.map((e) => (
+      <h3 className="mb-3 text-xl text-gray-600">Top Location</h3>
+      {data.map((e, index) => (
         <div>
-          <TopLocation cityName={e.location} cars={e.horsepower} />
+          <TopLocation cityName={e.location} cars={e.horsepower} key={index} />
         </div>
       ))}
 
