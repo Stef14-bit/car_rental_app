@@ -3,6 +3,7 @@ import React from "react";
 import { useSession } from "@supabase/auth-helpers-react";
 import TopInfo from "@/components/TopInfo";
 import useQuery from "@/hooks/usequery";
+import MobileNavbar from "@/components/MobileNavbar";
 
 const CarList = () => {
   const session = useSession();
@@ -32,6 +33,7 @@ const CarList = () => {
           </div>
         ))
       )}
+      <MobileNavbar />
     </div>
   );
 };
