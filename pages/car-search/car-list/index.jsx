@@ -1,33 +1,13 @@
 import CarCard from "@/components/CarCard";
-import React, { useEffect, useState } from "react";
-import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
+import React from "react";
+import { useSession } from "@supabase/auth-helpers-react";
 import TopInfo from "@/components/TopInfo";
+import useQuery from "@/hooks/usequery";
 
 const CarList = () => {
   const session = useSession();
-  const supabase = useSupabaseClient();
-  const [loading, setLoading] = useState(true);
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    getCars();
-  }, []);
+  const { data, loading } = useQuery("cars", "*");
 
-  async function getCars() {
-    try {
-      setLoading(true);
-      let { data, error, status } = await supabase.from("cars").select("*");
-      if (error && status !== 406) {
-        throw error;
-      }
-      if (data) {
-        setData(data);
-      }
-    } catch (error) {
-      console.error(error, "Error loading cars");
-    } finally {
-      setLoading(false);
-    }
-  }
   return (
     <div>
       <TopInfo />
