@@ -7,7 +7,7 @@ import useQuery from "@/hooks/usequery";
 
 function Location() {
   const session = useSession();
-  const { data, loading } = useQuery("cars", "location", "horsepower");
+  const { data, loading } = useQuery("cars", "location,horsepower");
   return (
     <div className="flex flex-col justify-between ml-5 mr-5 ">
       {session && <TopInfo />}
