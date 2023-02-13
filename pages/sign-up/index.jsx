@@ -1,11 +1,13 @@
-import { Auth, ThemeSupa } from '@supabase/auth-ui-react';
-import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react';
-import MobileNavbar from '@/components/MobileNavbar';
-import Link from 'next/link';
+import { Auth, ThemeSupa } from "@supabase/auth-ui-react";
+import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
+import MobileNavbar from "@/components/MobileNavbar";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 const Home = () => {
   const session = useSession();
   const supabase = useSupabaseClient();
+  const router = useRouter();
 
   return (
     <div className="">
@@ -15,12 +17,17 @@ const Home = () => {
             supabaseClient={supabase}
             appearance={{ theme: ThemeSupa }}
             theme="dark"
-            providers={['facebook', 'google', 'apple']}
+            providers={["facebook", "google", "apple"]}
           />
         </div>
       ) : (
-        <Link href="/profile">Redirect to profile</Link>
+        useEffect(() => {
+          setTimeout(() => {
+            router.push("/profile");
+          }, 1000);
+        }, [])
       )}
+
       <MobileNavbar />
     </div>
   );
