@@ -102,7 +102,6 @@ export default function Account({ session }) {
           id="email"
           type="text"
           value={session.user.email}
-          h
           disabled
         />
       </div>
