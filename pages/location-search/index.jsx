@@ -8,6 +8,16 @@ import useQuery from "@/hooks/usequery";
 function Location() {
   const session = useSession();
   const { data, loading } = useQuery("cars", "location,horsepower");
+  const filteredData = [...new Set(data.map((item) => item.location))];
+  const totalHP = filteredData.map((city) => {
+    return data.reduce((sum, item) => {
+      if (item.location === city) {
+        sum += item.horsepower;
+      }
+      return sum;
+    }, 0);
+  });
+
   return (
     <div className="flex flex-col justify-between ml-5 mr-5 ">
       {session && <TopInfo />}
@@ -24,9 +34,9 @@ function Location() {
       {loading ? (
         <h3>Loading ...</h3>
       ) : (
-        data.map((e, index) => (
+        filteredData.map((e, index) => (
           <div key={index}>
-            <TopLocation cityName={e.location} cars={e.horsepower} />
+            <TopLocation cityName={e} cars={totalHP[index]} />
           </div>
         ))
       )}
