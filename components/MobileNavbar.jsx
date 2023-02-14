@@ -10,7 +10,7 @@ function MobileNavbar() {
       <Link href="/location-search">
         <GrLocation size={"1.5em"} />
       </Link>
-      <Link href="/car-search">
+      <Link href="/categories">
         <BsSearch size={"1.5em"} />
       </Link>
       <Link href="/favorites">

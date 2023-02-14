@@ -1,0 +1,32 @@
+import { useState, useEffect } from "react";
+import { useSupabaseClient } from "@supabase/auth-helpers-react";
+
+const useQuery = (table, columns, desiredCategory) => {
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState([]);
+  const supabase = useSupabaseClient();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+
+      try {
+        const response = await supabase
+          .from(table)
+          .select(columns)
+          .where({ category: desiredCategory });
+        setData(response.data);
+      } catch (error) {
+        console.error(error, `Error loading data from ${table}`);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [table, columns, supabase]);
+
+  return { data, loading };
+};
+
+export default useQuery;
