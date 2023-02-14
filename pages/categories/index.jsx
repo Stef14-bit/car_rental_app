@@ -1,6 +1,6 @@
 import MobileNavbar from "@/components/MobileNavbar";
 import TopInfo from "@/components/TopInfo";
-import React, { useState } from "react";
+import React from "react";
 import { useSession } from "@supabase/auth-helpers-react";
 import Link from "next/link";
 import CategoryCard from "@/components/CategoryCard";

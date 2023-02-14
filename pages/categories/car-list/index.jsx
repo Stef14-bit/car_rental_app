@@ -25,7 +25,7 @@ const CarList = () => {
               make={e.make}
               model={e.model}
               rate={e.rate}
-              transmission={"e.transmisson"}
+              transmission={e.transmisson}
               doors={e.doors}
               horsepower={e.horsepower}
               price={e.price}
