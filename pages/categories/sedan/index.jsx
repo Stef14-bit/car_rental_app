@@ -35,7 +35,10 @@ function Sedan() {
 
   return (
     <div>
-      <Link href={"/categories"}>back to categories</Link>
+      <button>
+        <Link href={"/categories"}>back to categories</Link>
+      </button>
+
       {data.map((e, index) => (
         <div key={index}>
           <CarCard
