@@ -48,7 +48,9 @@ function TopInfo({ session }) {
         <h3 className="text-xl">Location</h3>
       </div>
       <div className="bg-white h-12 w-12 rounded-md flex items-center justify-center">
-        {avatar_url ? (
+        {loading ? (
+          <h2>Loading...</h2>
+        ) : avatar_url ? (
           <img src={avatar_url} alt="Avatar" />
         ) : (
           <CgProfile size={"1.5em"} />
