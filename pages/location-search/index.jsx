@@ -19,7 +19,7 @@ function Location() {
   });
 
   return (
-    <div className="flex flex-col justify-between ml-5 mr-5 ">
+    <div className="flex flex-col justify-between mx-5 mb-24">
       {session && <TopInfo />}
       <h1 className="text-4xl my-10  text-gray-600">
         Find and rent cool cars in your town{" "}
