@@ -65,7 +65,7 @@ export default function Account({ session }) {
   }
 
   return (
-    <div className="flex flex-col items-center justify-between">
+    <div className="flex flex-col items-center justify-between ">
       <div className="font-thin text-3xl  relative top-12 left-5">
         <label htmlFor="username"></label>
         <input
@@ -81,18 +81,19 @@ export default function Account({ session }) {
         <Avatar
           uid={user.id}
           url={avatar_url}
-          size={200}
           onUpload={(url) => {
             setAvatarUrl(url);
             updateProfile({ username, website, avatar_url: url });
           }}
         />
-        <button
-          className="button primary"
+      </div>
+      <div>
+        <div
+          className="p-2  bg-teal-600 text-white rounded-md max-w-md"
           onClick={() => updateProfile({ username, website, avatar_url })}
           disabled={loading}>
-          {loading ? "Loading ..." : "Update"}
-        </button>
+          {loading ? "Loading ..." : "Update Profile"}
+        </div>
       </div>
       <div className="font-thin text-2xl  relative ">
         <label htmlFor="email">Email : </label>
@@ -101,7 +102,6 @@ export default function Account({ session }) {
           id="email"
           type="text"
           value={session.user.email}
-          h
           disabled
         />
       </div>
@@ -119,7 +119,7 @@ export default function Account({ session }) {
 
       <div>
         <button
-          className="text-red-600"
+          className="text-red-600 "
           onClick={() => supabase.auth.signOut()}>
           Sign Out
         </button>

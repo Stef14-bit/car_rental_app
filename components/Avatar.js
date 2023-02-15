@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 
-export default function Avatar({ uid, url, size, onUpload }) {
+export default function Avatar({ uid, url, onUpload }) {
   const supabase = useSupabaseClient();
   const [avatarUrl, setAvatarUrl] = useState(null);
   const [uploading, setUploading] = useState(false);
@@ -56,29 +56,19 @@ export default function Avatar({ uid, url, size, onUpload }) {
   };
 
   return (
-    <div className="w-full">
-      {avatarUrl ? (
-        <img
-          src={avatarUrl}
-          alt="Avatar"
-          className="rounded-md"
-          style={{ height: size, width: size }}
-        />
-      ) : (
-        <div
-          className="avatar no-image"
-          style={{ height: size, width: size }}
-        />
-      )}
+    <div>
       <div>
-        <label className="button primary " htmlFor="single">
-          {uploading ? "Uploading ..." : "Upload"}
+        {avatarUrl && (
+          <img className="h-64 rounded-md my-10" src={avatarUrl} alt="Avatar" />
+        )}
+      </div>
+
+      <div className="p-2  bg-teal-600 text-white rounded-md text-center">
+        <label htmlFor="single">
+          {uploading ? "Uploading ..." : "Upload Profile picture"}
         </label>
         <input
-          style={{
-            visibility: "hidden",
-            position: "absolute",
-          }}
+          className="hidden"
           type="file"
           id="single"
           accept="image/*"

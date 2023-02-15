@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   const [supabase] = useState(() => createBrowserSupabaseClient());
 
   return (
-    <div className="h-screen bg-gradient-to-b from-slate-400 to-slate-200">
+    <div className="h-screen bg-gradient-to-b from-slate-400 to-slate-200 overflow-scroll pb-40">
       {" "}
       <SessionContextProvider
         supabaseClient={supabase}
