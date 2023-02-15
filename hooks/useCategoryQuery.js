@@ -13,8 +13,8 @@ const useQuery = (table, columns, desiredCategory) => {
       try {
         const response = await supabase
           .from(table)
-          .select(columns)
-          .where({ category: desiredCategory });
+          .select()
+          .like(columns, desiredCategory);
         setData(response.data);
       } catch (error) {
         console.error(error, `Error loading data from ${table}`);
