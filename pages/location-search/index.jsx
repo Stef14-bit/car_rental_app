@@ -3,13 +3,11 @@ import React, { useState, useEffect } from "react";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import TopInfo from "@/components/TopInfo";
 import TopLocation from "@/components/TopLocation";
-import useQuery from "@/hooks/usequery";
 
 function Location() {
   const session = useSession();
   const supabase = useSupabaseClient();
   const [count, setCount] = useState([]);
-  const { data, loading } = useQuery("cars", "location,horsepower");
 
   useEffect(() => {
     async function carsCount() {
@@ -52,17 +50,13 @@ function Location() {
         placeholder="choose location"
       />
       <h3 className="mb-3 text-xl text-gray-600">Top Location</h3>
-      {loading ? (
-        <h3>Loading ...</h3>
-      ) : (
-        count.map((location, index) => (
-          <TopLocation
-            key={index}
-            cityName={location.location}
-            cars={location.count}
-          />
-        ))
-      )}
+      {count.map((location, index) => (
+        <TopLocation
+          key={index}
+          cityName={location.location}
+          cars={location.count}
+        />
+      ))}
 
       <MobileNavbar />
     </div>

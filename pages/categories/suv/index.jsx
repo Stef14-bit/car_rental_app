@@ -4,6 +4,7 @@ import TopInfo from "@/components/TopInfo";
 import useCategoryQuery from "@/hooks/useCategoryQuery";
 
 import { useSession } from "@supabase/auth-helpers-react";
+import MobileNavbar from "@/components/MobileNavbar";
 function Suv() {
   const session = useSession();
   const { data, loading } = useCategoryQuery("cars", "category ", "SUV");
@@ -12,7 +13,19 @@ function Suv() {
     <div>
       {" "}
       {session && <TopInfo />}
-      <Link href={"/categories"}>back to categories</Link>
+      <div className="flex justify-around m-5 p-5 ">
+        {" "}
+        <Link
+          className="bg-teal-600 p-1 rounded-md text-white"
+          href="/categories/car-list">
+          All cars
+        </Link>
+        <Link
+          className="bg-teal-600 p-1 rounded-md text-white"
+          href={"/categories"}>
+          Back to categories
+        </Link>
+      </div>
       {loading ? (
         <h2>Loading...</h2>
       ) : (
@@ -34,6 +47,7 @@ function Suv() {
           </div>
         ))
       )}
+      <MobileNavbar />
     </div>
   );
 }

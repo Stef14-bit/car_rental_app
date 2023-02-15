@@ -32,7 +32,7 @@ const CarCard = ({
       <Link
         href="https://giphy.com/clips/justin-funny-dog-werk-jnbvNSt7xPPEiWfCPu"
         target="_blank">
-        <button className=" bg-sky-400 w-2/3 h-10 rounded-full text-white font-semibold ml-14 mb-4 shadow-lg ">
+        <button className="bg-teal-600 w-2/3 h-10 rounded-full text-white font-semibold ml-14 mb-4 shadow-lg ">
           Rent
         </button>
       </Link>
