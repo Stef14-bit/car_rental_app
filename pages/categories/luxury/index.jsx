@@ -1,19 +1,21 @@
-import CarCard from "@/components/CarCard";
+import Link from "next/link";
 import React from "react";
-import { useSession } from "@supabase/auth-helpers-react";
+import useCategoryQuery from "@/hooks/useCategoryQuery";
+import CarCard from "@/components/CarCard";
 import TopInfo from "@/components/TopInfo";
-import useQuery from "@/hooks/usequery";
-import MobileNavbar from "@/components/MobileNavbar";
+import { useSession } from "@supabase/auth-helpers-react";
 
-const CarList = () => {
+function Luxury() {
+  const { data, loading } = useCategoryQuery("cars", "category ", "Luxury");
   const session = useSession();
-  const { data, loading } = useQuery("cars", "*");
 
   return (
     <div>
-      <TopInfo />
+      {" "}
+      {session && <TopInfo />}{" "}
+      <Link href={"/categories"}>back to categories</Link>
       {loading ? (
-        <h3>Loading ...</h3>
+        <h2>Loading...</h2>
       ) : (
         data.map((e, index) => (
           <div key={index}>
@@ -25,7 +27,7 @@ const CarList = () => {
               make={e.make}
               model={e.model}
               rate={e.rate}
-              transmission={"e.transmisson"}
+              transmission={e.transmission}
               doors={e.doors}
               horsepower={e.horsepower}
               price={e.price}
@@ -33,9 +35,8 @@ const CarList = () => {
           </div>
         ))
       )}
-      <MobileNavbar />
     </div>
   );
-};
+}
 
-export default CarList;
+export default Luxury;
