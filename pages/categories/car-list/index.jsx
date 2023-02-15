@@ -2,7 +2,7 @@ import CarCard from "@/components/CarCard";
 import React from "react";
 import { useSession } from "@supabase/auth-helpers-react";
 import TopInfo from "@/components/TopInfo";
-import useQuery from "@/hooks/usequery";
+import useQuery from "@/hooks/useQuery";
 import MobileNavbar from "@/components/MobileNavbar";
 import Link from "next/link";
 
