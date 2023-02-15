@@ -13,7 +13,7 @@ const CarCard = ({
   price,
 }) => {
   return (
-    <div className="flex flex-col bg-gray-100 ml-5 mr-5 mb-10   border-4 border-gray-500  shadow-lg shadow-gray-500/75 ">
+    <div className="flex flex-col bg-gray-100 mx-5 mb-10  border-4 border-gray-500  shadow-lg shadow-gray-500/75 sm:w-80">
       <h2 className="text-3xl  ml-5 ">{category}</h2>
       <img src={carImage} className="max-w-xs m-4" />
       <div className="flex">

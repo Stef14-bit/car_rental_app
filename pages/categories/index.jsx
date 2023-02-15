@@ -22,7 +22,7 @@ function CarSearch() {
         What type of car are you looking for ?
       </h2>
       <Link href="categories/car-list">Cateories</Link>
-      <div className="grid grid-cols-2 gap-4 justify-items-center align-items-center h-full my-5">
+      <div className="grid grid-cols-2 gap-4 justify-items-center align-items-center h-full my-5 ">
         <CategoryCard categoryImg={suv} category={"SUV"} page={"suv"} />
         <CategoryCard categoryImg={sedan} category={"Sedan"} page={"sedan"} />
         <CategoryCard categoryImg={sport} category={"Sport"} page={"sport"} />

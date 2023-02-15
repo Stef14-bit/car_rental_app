@@ -11,7 +11,7 @@ const CarList = () => {
   const session = useSession();
 
   return (
-    <div>
+    <div className="flex flex-wrap">
       {session && <TopInfo />}
 
       {loading ? (
