@@ -6,12 +6,14 @@ import useQuery from "@/hooks/usequery";
 import MobileNavbar from "@/components/MobileNavbar";
 
 const CarList = () => {
-  const session = useSession();
   const { data, loading } = useQuery("cars", "*");
+
+  const session = useSession();
 
   return (
     <div>
-      <TopInfo />
+      {session && <TopInfo />}
+
       {loading ? (
         <h3>Loading ...</h3>
       ) : (

@@ -2,13 +2,17 @@ import Link from "next/link";
 import React from "react";
 import useCategoryQuery from "@/hooks/useCategoryQuery";
 import CarCard from "@/components/CarCard";
+import TopInfo from "@/components/TopInfo";
+import { useSession } from "@supabase/auth-helpers-react";
 
 function Luxury() {
   const { data, loading } = useCategoryQuery("cars", "category ", "Luxury");
+  const session = useSession();
 
   return (
     <div>
       {" "}
+      {session && <TopInfo />}{" "}
       <Link href={"/categories"}>back to categories</Link>
       {loading ? (
         <h2>Loading...</h2>
