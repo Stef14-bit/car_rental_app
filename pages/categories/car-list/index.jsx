@@ -4,6 +4,7 @@ import { useSession } from "@supabase/auth-helpers-react";
 import TopInfo from "@/components/TopInfo";
 import useQuery from "@/hooks/usequery";
 import MobileNavbar from "@/components/MobileNavbar";
+import Link from "next/link";
 
 const CarList = () => {
   const { data, loading } = useQuery("cars", "*");
@@ -11,8 +12,16 @@ const CarList = () => {
   const session = useSession();
 
   return (
-    <div>
+    <div className="flex flex-wrap">
       {session && <TopInfo />}
+      <div className="flex justify-around m-5 p-5 ">
+        {" "}
+        <Link
+          className="bg-teal-600 p-1 rounded-md text-white"
+          href={"/categories"}>
+          Back to categories
+        </Link>
+      </div>
 
       {loading ? (
         <h3>Loading ...</h3>

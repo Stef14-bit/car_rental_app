@@ -44,7 +44,7 @@ function TopInfo() {
   }
 
   return (
-    <div className="p-8 flex items-center flex-row justify-between">
+    <div className="p-8 flex items-center flex-row justify-between w-full">
       <div className="bg-white h-12 w-12 rounded-md flex items-center justify-center">
         <GrLocation size={"1.5em"} />
       </div>
