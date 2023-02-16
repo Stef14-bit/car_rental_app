@@ -1,4 +1,3 @@
-import MobileNavbar from "@/components/MobileNavbar";
 import React, { useState, useEffect } from "react";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import TopInfo from "@/components/TopInfo";
@@ -38,14 +37,14 @@ function Location() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-between mx-5 mb-24">
+    <div className="mx-5">
       {session && <TopInfo />}
       <h1 className="text-4xl my-10  text-gray-600">
         Find and rent cool cars in your town{" "}
       </h1>
 
       <input
-        className="rounded-full h-12 mb-10 text-center "
+        className="rounded-full h-12 w-full text-center my-5"
         type="search"
         placeholder="choose location"
       />
@@ -57,8 +56,6 @@ function Location() {
           cars={location.count}
         />
       ))}
-
-      <MobileNavbar />
     </div>
   );
 }

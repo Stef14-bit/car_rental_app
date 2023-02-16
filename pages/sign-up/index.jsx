@@ -1,6 +1,5 @@
 import { Auth, ThemeSupa } from "@supabase/auth-ui-react";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
-import MobileNavbar from "@/components/MobileNavbar";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
@@ -27,8 +26,6 @@ const Home = () => {
           }, 1000);
         }, [])
       )}
-
-      <MobileNavbar />
     </div>
   );
 };

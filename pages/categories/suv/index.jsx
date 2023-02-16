@@ -4,7 +4,6 @@ import TopInfo from "@/components/TopInfo";
 import useCategoryQuery from "@/hooks/useCategoryQuery";
 
 import { useSession } from "@supabase/auth-helpers-react";
-import MobileNavbar from "@/components/MobileNavbar";
 function Suv() {
   const session = useSession();
   const { data, loading } = useCategoryQuery("cars", "category ", "SUV");
@@ -47,7 +46,6 @@ function Suv() {
           </div>
         ))
       )}
-      <MobileNavbar />
     </div>
   );
 }

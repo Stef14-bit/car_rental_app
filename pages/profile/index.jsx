@@ -1,4 +1,3 @@
-import MobileNavbar from "@/components/MobileNavbar";
 import React from "react";
 import { useSession } from "@supabase/auth-helpers-react";
 import Account from "@/components/Account";
@@ -22,7 +21,6 @@ function Profile() {
           <Account session={session} />
         )}
       </div>
-      <MobileNavbar />
     </div>
   );
 }
