@@ -1,7 +1,6 @@
 import CarCard from "@/components/CarCard";
 import React from "react";
 import { useSession } from "@supabase/auth-helpers-react";
-import TopInfo from "@/components/TopInfo";
 import useQuery from "@/hooks/useQuery";
 import Link from "next/link";
 
@@ -12,7 +11,6 @@ const CarList = () => {
 
   return (
     <div className="flex flex-wrap">
-      {session && <TopInfo />}
       <div className="flex justify-around m-5 p-5 ">
         {" "}
         <Link

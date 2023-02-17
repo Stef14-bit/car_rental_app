@@ -1,14 +1,13 @@
+import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import star_rental from "../public/star_rental.png";
 import Image from "next/image";
-import { useSupabaseClient, useSession } from "@supabase/auth-helpers-react";
-import { useState } from "react";
 
 const navigation = [
   { name: "Home", href: "/", current: true },
-  { name: "Categories", href: "/categories", current: false },
   { name: "Location", href: "/location-search", current: false },
+  { name: "Categories", href: "/categories", current: false },
   { name: "Profile", href: "/profile", current: false },
 ];
 
@@ -17,12 +16,6 @@ function classNames(...classes) {
 }
 
 export default function NavBar() {
-  const session = useSession();
-  const [loading, setLoading] = useState(true);
-  const [avatar, setAvatar] = useState(null);
-
-  const supabase = useSupabaseClient();
-
   return (
     <Disclosure as="nav" className="">
       {({ open }) => (
@@ -73,16 +66,39 @@ export default function NavBar() {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                {/* Profile picture */}
-
-                <Image
-                  className="h-8 w-8 rounded-full"
-                  src={star_rental}
-                  alt="Profile img"
-                />
+                {/* Profile dropdown */}
+                <Menu as="div" className="relative ml-3">
+                  <Menu.Button className="flex rounded-full bg-gray-800 text-sm ">
+                    <Image
+                      className="h-8 w-8 rounded-full"
+                      src={star_rental}
+                      alt="Profile"
+                    />
+                  </Menu.Button>
+                </Menu>
               </div>
             </div>
           </div>
+
+          <Disclosure.Panel className="sm:hidden">
+            <div className="space-y-1 px-2 pt-2 pb-3 text-center">
+              {navigation.map((item) => (
+                <Disclosure.Button
+                  key={item.name}
+                  as="a"
+                  href={item.href}
+                  className={classNames(
+                    item.current
+                      ? "bg-gray-900 text-white"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                    "block px-3 py-2 rounded-md text-base font-medium"
+                  )}
+                  aria-current={item.current ? "page" : undefined}>
+                  {item.name}
+                </Disclosure.Button>
+              ))}
+            </div>
+          </Disclosure.Panel>
         </>
       )}
     </Disclosure>

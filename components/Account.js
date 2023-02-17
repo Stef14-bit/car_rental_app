@@ -69,7 +69,7 @@ export default function Account({ session }) {
       <div className="font-thin text-3xl  relative top-12 left-5">
         <label htmlFor="username"></label>
         <input
-          className="bg-gray"
+          className="bg-transparent"
           id="username"
           type="text"
           value={username || ""}

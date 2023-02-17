@@ -1,6 +1,5 @@
 import Link from "next/link";
 import CarCard from "@/components/CarCard";
-import TopInfo from "@/components/TopInfo";
 import useCategoryQuery from "@/hooks/useCategoryQuery";
 
 import { useSession } from "@supabase/auth-helpers-react";
@@ -11,7 +10,6 @@ function Suv() {
   return (
     <div>
       {" "}
-      {session && <TopInfo />}
       <div className="flex justify-around m-5 p-5 ">
         {" "}
         <Link

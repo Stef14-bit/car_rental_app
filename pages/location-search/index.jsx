@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
-import TopInfo from "@/components/TopInfo";
 import TopLocation from "@/components/TopLocation";
 
 function Location() {

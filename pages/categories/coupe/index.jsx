@@ -1,7 +1,6 @@
 import Link from "next/link";
 import CarCard from "@/components/CarCard";
 import useCategoryQuery from "@/hooks/useCategoryQuery";
-import TopInfo from "@/components/TopInfo";
 import { useSession } from "@supabase/auth-helpers-react";
 
 function Coupe() {
@@ -11,8 +10,6 @@ function Coupe() {
 
   return (
     <div>
-      {" "}
-      {session && <TopInfo />}
       <div className="flex justify-around m-5 p-5 ">
         {" "}
         <Link

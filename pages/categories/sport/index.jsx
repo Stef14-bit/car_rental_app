@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import CarCard from "@/components/CarCard";
-import TopInfo from "@/components/TopInfo";
 import { useSession } from "@supabase/auth-helpers-react";
 import useCategoryQuery from "@/hooks/useCategoryQuery";
 
@@ -13,7 +12,6 @@ function Sport() {
   return (
     <div>
       {" "}
-      {session && <TopInfo />}
       <div className="flex justify-around m-5 p-5 ">
         {" "}
         <Link
