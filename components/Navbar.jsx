@@ -1,11 +1,11 @@
-import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import star_rental from "../public/star_rental.png";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const navigation = [
-  { name: "Home", href: "/", current: true },
+  { name: "Home", href: "/", current: false },
   { name: "Location", href: "/location-search", current: false },
   { name: "Categories", href: "/categories", current: false },
   { name: "Profile", href: "/profile", current: false },
@@ -16,6 +16,7 @@ function classNames(...classes) {
 }
 
 export default function NavBar() {
+  const router = useRouter();
   return (
     <Disclosure as="nav" className="">
       {({ open }) => (
@@ -53,12 +54,14 @@ export default function NavBar() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current
+                          router.asPath === item.href
                             ? "bg-gray-900 text-white"
                             : "text-gray-300 hover:bg-gray-700 hover:text-white",
                           "px-3 py-2 rounded-md text-sm font-medium"
                         )}
-                        aria-current={item.current ? "page" : undefined}>
+                        aria-current={
+                          router.asPath === item.href ? "page" : undefined
+                        }>
                         {item.name}
                       </a>
                     ))}
@@ -88,12 +91,14 @@ export default function NavBar() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current
+                    router.asPath === item.href
                       ? "bg-gray-900 text-white"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white",
                     "block px-3 py-2 rounded-md text-base font-medium"
                   )}
-                  aria-current={item.current ? "page" : undefined}>
+                  aria-current={
+                    router.asPath === item.href ? "page" : undefined
+                  }>
                   {item.name}
                 </Disclosure.Button>
               ))}
