@@ -63,7 +63,7 @@ export default function Avatar({ uid, url, onUpload }) {
         )}
       </div>
 
-      <div className="p-2  bg-teal-600 text-white rounded-md text-center">
+      <div className="p-2  bg-orange text-white rounded-md text-center">
         <label htmlFor="single">
           {uploading ? "Uploading ..." : "Upload Profile picture"}
         </label>

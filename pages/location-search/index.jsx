@@ -38,7 +38,6 @@ function Location() {
 
   return (
     <div className="mx-5">
-      {session && <TopInfo />}
       <h1 className="text-4xl my-10  text-gray-600">
         Find and rent cool cars in your town{" "}
       </h1>

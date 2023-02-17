@@ -1,4 +1,3 @@
-import TopInfo from "@/components/TopInfo";
 import React from "react";
 import { useSession } from "@supabase/auth-helpers-react";
 import Link from "next/link";
@@ -14,14 +13,12 @@ function CarSearch() {
   const session = useSession();
 
   return (
-    <div className="flex flex-col justify-center mx-5">
-      {session && <TopInfo />}
-
+    <div className="flex flex-col justify-center content-center mx-5">
       <h2 className="text-3xl my-5  text-gray-600">
         What type of car are you looking for ?
       </h2>
       <Link
-        className="bg-teal-600 p-1 rounded-md text-white text-center"
+        className="bg-blue p-1 rounded-md text-white text-center max-w-xs"
         href="categories/car-list">
         All Cateories
       </Link>

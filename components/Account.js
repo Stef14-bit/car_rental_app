@@ -69,7 +69,7 @@ export default function Account({ session }) {
       <div className="font-thin text-3xl  relative top-12 left-5">
         <label htmlFor="username"></label>
         <input
-          className="bg-transparent"
+          className="bg-gray"
           id="username"
           type="text"
           value={username || ""}
@@ -89,7 +89,7 @@ export default function Account({ session }) {
       </div>
       <div>
         <div
-          className="p-2  bg-teal-600 text-white rounded-md max-w-md"
+          className="p-2  bg-blue text-white rounded-md max-w-md"
           onClick={() => updateProfile({ username, website, avatar_url })}
           disabled={loading}>
           {loading ? "Loading ..." : "Update Profile"}
