@@ -6,7 +6,7 @@ import { BsSearch, BsStar } from "react-icons/bs";
 
 function MobileNavbar() {
   return (
-    <div className=" bg-slate-400 flex justify-around items-center w-full h-20 ">
+    <div className=" bg-slate-400 flex justify-around items-center w-full h-16 ">
       <Link href="/location-search">
         <GrLocation size={"1.5em"} />
       </Link>
