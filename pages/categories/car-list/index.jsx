@@ -10,7 +10,7 @@ const CarList = () => {
   const session = useSession();
 
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap justify-center">
       <div className="flex justify-around m-5 p-5 ">
         {" "}
         <Link
