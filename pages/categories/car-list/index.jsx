@@ -12,9 +12,9 @@ const CarList = () => {
   const session = useSession();
 
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap justify-center">
       {session && <TopInfo />}
-      <div className="flex justify-around m-5 p-5 ">
+      <div className="flex justify-around m-5 p-5 self-center w-full">
         {" "}
         <Link
           className="bg-teal-600 p-1 rounded-md text-white"
