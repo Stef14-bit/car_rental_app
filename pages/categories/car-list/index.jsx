@@ -11,10 +11,10 @@ const CarList = () => {
 
   return (
     <div className="flex flex-wrap justify-center">
-      <div className="flex justify-around m-5 p-5 ">
+      <div className="flex justify-around m-5 p-5 self-center w-full">
         {" "}
         <Link
-          className="bg-teal-600 p-1 rounded-md text-white"
+          className="bg-teal-600 p-1 rounded-md text-white "
           href={"/categories"}>
           Back to categories
         </Link>
