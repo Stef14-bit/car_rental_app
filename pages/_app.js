@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
   const [supabase] = useState(() => createBrowserSupabaseClient());
 
   return (
-    <div className="min-h-screen flex flex-col content-center justify-between bg-gradient-to-b from-gray to-white">
+    <div className="min-h-screen flex flex-col content-center  justify-between bg-gradient-to-b from-gray to-white">
       <NavBar />
       <SessionContextProvider
         supabaseClient={supabase}

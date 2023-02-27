@@ -65,8 +65,8 @@ export default function Account({ session }) {
   }
 
   return (
-    <div className="flex flex-col items-center justify-between ">
-      <div className="font-thin text-3xl  relative top-12 left-5">
+    <div className="h-full flex flex-col justify-between">
+      <div className="font-thin text-3xl">
         <label htmlFor="username"></label>
         <input
           className="bg-transparent"
@@ -89,13 +89,13 @@ export default function Account({ session }) {
       </div>
       <div>
         <div
-          className="p-2  bg-blue text-white rounded-md max-w-md"
+          className="p-2 text-center my-2 bg-blue text-white rounded-md"
           onClick={() => updateProfile({ username, website, avatar_url })}
           disabled={loading}>
           {loading ? "Loading ..." : "Update Profile"}
         </div>
       </div>
-      <div className="font-thin text-2xl  relative ">
+      <div className="font-thin text-2xl my-2">
         <label htmlFor="email">Email : </label>
         <input
           className="bg-transparent"
@@ -106,7 +106,7 @@ export default function Account({ session }) {
         />
       </div>
 
-      <div className="font-thin text-2xl relative left-5">
+      <div className="font-thin text-2xl my-2">
         <label htmlFor="website">Website : </label>
         <input
           className="bg-transparent"
@@ -117,9 +117,9 @@ export default function Account({ session }) {
         />
       </div>
 
-      <div>
+      <div className="text-center my-2">
         <button
-          className="text-red-600 "
+          className="text-red-600"
           onClick={() => supabase.auth.signOut()}>
           Sign Out
         </button>

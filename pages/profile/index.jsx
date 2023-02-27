@@ -6,7 +6,7 @@ import Link from "next/link";
 function Profile() {
   const session = useSession();
   return (
-    <div className="h-4/5 flex justify-center">
+    <div className="h-full flex  justify-center ">
       <div className="flex justify-center content-center">
         {!session ? (
           <h3>
