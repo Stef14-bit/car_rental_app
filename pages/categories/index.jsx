@@ -18,9 +18,9 @@ function CarSearch() {
         What type of car are you looking for ?
       </h2>
       <Link
-        className="bg-blue p-1 rounded-md text-white text-center max-w-xs"
+        className="bg-blue p-1 rounded-md text-white text-center w-2/6 self-center my-8 "
         href="categories/car-list">
-        All Cateories
+        All Cars
       </Link>
       <div className="grid grid-cols-2 gap-4 justify-items-center align-items-center h-full my-5 ">
         <CategoryCard categoryImg={suv} category={"SUV"} page={"suv"} />
