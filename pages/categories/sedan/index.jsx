@@ -2,7 +2,6 @@ import Link from "next/link";
 import CarCard from "@/components/CarCard";
 import useCategoryQuery from "@/hooks/useCategoryQuery";
 import { useSession } from "@supabase/auth-helpers-react";
-import TopInfo from "@/components/TopInfo";
 
 function Sedan() {
   const session = useSession();
@@ -11,8 +10,6 @@ function Sedan() {
 
   return (
     <div>
-      {session && <TopInfo />}
-
       <div className="flex justify-around m-5 p-5 ">
         <Link
           className="bg-teal-600 p-1 rounded-md text-white"

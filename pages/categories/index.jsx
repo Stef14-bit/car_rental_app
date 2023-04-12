@@ -1,5 +1,3 @@
-import MobileNavbar from "@/components/MobileNavbar";
-import TopInfo from "@/components/TopInfo";
 import React from "react";
 import { useSession } from "@supabase/auth-helpers-react";
 import Link from "next/link";
@@ -15,13 +13,15 @@ function CarSearch() {
   const session = useSession();
 
   return (
-    <div className="flex flex-col justify-between">
-      {session && <TopInfo />}
-
-      <h2 className="text-3xl my-5  text-gray-600 mx-3">
+    <div className="flex flex-col justify-center content-center mx-5">
+      <h2 className="text-3xl my-5  text-gray-600">
         What type of car are you looking for ?
       </h2>
-      <Link href="categories/car-list">Cateories</Link>
+      <Link
+        className="bg-blue p-1 rounded-md text-white text-center w-2/6 self-center my-8 "
+        href="categories/car-list">
+        All Cars
+      </Link>
       <div className="grid grid-cols-2 gap-4 justify-items-center align-items-center h-full my-5 ">
         <CategoryCard categoryImg={suv} category={"SUV"} page={"suv"} />
         <CategoryCard categoryImg={sedan} category={"Sedan"} page={"sedan"} />
@@ -38,8 +38,6 @@ function CarSearch() {
           page={"luxury"}
         />
       </div>
-
-      <MobileNavbar />
     </div>
   );
 }

@@ -1,14 +1,15 @@
-import MobileNavbar from "@/components/MobileNavbar";
 import React from "react";
 import { useSession } from "@supabase/auth-helpers-react";
 import Account from "@/components/Account";
 import Link from "next/link";
+import TestAvatar from "@/components/TestAvatar";
 
 function Profile() {
   const session = useSession();
   return (
-    <div className="h-4/5 flex justify-center">
+    <div className="h-full flex  justify-center ">
       <div className="flex justify-center content-center">
+        <TestAvatar />
         {!session ? (
           <h3>
             Signup to access page
@@ -22,7 +23,6 @@ function Profile() {
           <Account session={session} />
         )}
       </div>
-      <MobileNavbar />
     </div>
   );
 }

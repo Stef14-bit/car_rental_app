@@ -1,10 +1,8 @@
 import Link from "next/link";
 import CarCard from "@/components/CarCard";
-import TopInfo from "@/components/TopInfo";
 import useCategoryQuery from "@/hooks/useCategoryQuery";
 
 import { useSession } from "@supabase/auth-helpers-react";
-import MobileNavbar from "@/components/MobileNavbar";
 function Suv() {
   const session = useSession();
   const { data, loading } = useCategoryQuery("cars", "category ", "SUV");
@@ -12,7 +10,6 @@ function Suv() {
   return (
     <div>
       {" "}
-      {session && <TopInfo />}
       <div className="flex justify-around m-5 p-5 ">
         {" "}
         <Link
@@ -47,7 +44,6 @@ function Suv() {
           </div>
         ))
       )}
-      <MobileNavbar />
     </div>
   );
 }
