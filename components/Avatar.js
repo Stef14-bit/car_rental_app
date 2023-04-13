@@ -57,7 +57,7 @@ export default function Avatar({ uid, url, onUpload }) {
 
   return (
     <div>
-      <div>
+      <div className="flex justify-center">
         {avatarUrl && (
           <img className="h-64 rounded-md my-10" src={avatarUrl} alt="Avatar" />
         )}
