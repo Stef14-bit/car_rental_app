@@ -3,7 +3,6 @@ import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import TopLocation from "@/components/TopLocation";
 
 function Location() {
-  const session = useSession();
   const supabase = useSupabaseClient();
   const [count, setCount] = useState([]);
 
