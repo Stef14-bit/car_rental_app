@@ -8,13 +8,13 @@ import luxury from "../assets/luxury.jpg";
 const Home = () => {
   return (
     <div className="flex flex-col h-full  top-16 ">
-      <h1 className="text-5xl font-bold text-darkGray p-4 ">
+      <h1 className="text-5xl font-bold text-darkGray p-4 md:flex md:justify-center">
         Rent cool cars in your city
       </h1>
       <h2 className="text-center  text-darkGray py-12">
         Curently availible in {"city"}
       </h2>
-      <div className="w-fit flex flex-wrap justify-center">
+      <div className="w-full flex flex-wrap justify-center content-center">
         <CategoryCard categoryImg={suv} category={"SUV"} page={"suv"} />
         <CategoryCard categoryImg={sedan} category={"Sedan"} page={"sedan"} />
         <CategoryCard categoryImg={sport} category={"Sport"} page={"sport"} />

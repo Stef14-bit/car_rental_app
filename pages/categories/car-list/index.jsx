@@ -24,7 +24,7 @@ const CarList = () => {
         <h3>Loading ...</h3>
       ) : (
         data.map((e, index) => (
-          <div key={index}>
+          <div className="flex justify-center" key={index}>
             <CarCard
               category={e.category}
               carImage={

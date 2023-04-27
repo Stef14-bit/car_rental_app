@@ -3,7 +3,6 @@ import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 import TopLocation from "@/components/TopLocation";
 
 function Location() {
-  const session = useSession();
   const supabase = useSupabaseClient();
   const [count, setCount] = useState([]);
 
@@ -37,8 +36,8 @@ function Location() {
 
   return (
     <div className="mx-5">
-      <h1 className="text-4xl my-10  text-gray-600">
-        Find and rent cool cars in your town{" "}
+      <h1 className="text-5xl font-bold text-darkGray p-4 ">
+        Rent cool cars in your city
       </h1>
 
       <input

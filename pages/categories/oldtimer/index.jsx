@@ -28,7 +28,7 @@ function Oldtimer() {
         <h2>Loading...</h2>
       ) : (
         data.map((e, index) => (
-          <div key={index}>
+          <div className="flex justify-center" key={index}>
             <CarCard
               category={e.category}
               carImage={

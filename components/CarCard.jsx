@@ -29,9 +29,7 @@ const CarCard = ({
       <h3 className="text-xl text-center mb-2">
         Starting from {price} € / Day{" "}
       </h3>
-      <Link
-        href="https://giphy.com/clips/justin-funny-dog-werk-jnbvNSt7xPPEiWfCPu"
-        target="_blank">
+      <Link href="/rentPage">
         <button className="bg-blue w-2/3 h-10 rounded-full text-white font-semibold ml-14 mb-4 shadow-lg ">
           Rent
         </button>
