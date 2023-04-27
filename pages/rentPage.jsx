@@ -21,7 +21,7 @@ function rentPage() {
     <div className="flex justify-center items-center h-full">
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="w-96  h-96 flex flex-col items-center justify-center justify-around">
+        className="w-96  h-96 flex flex-col items-center justify-around">
         <label htmlFor="from">From</label>
         <input
           id="from"
