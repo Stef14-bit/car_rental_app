@@ -21,7 +21,7 @@ function rentPage() {
     <div className="flex justify-center items-center h-full">
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="w-96  h-96 flex flex-col items-center justify-around">
+        className="w-96  h-96 flex flex-col items-center justify-center justify-around">
         <label htmlFor="from">From</label>
         <input
           id="from"
@@ -39,7 +39,10 @@ function rentPage() {
           type="date"
         />
 
-        <button type="Submit" onClick={handleSubmit}>
+        <button
+          type="Submit"
+          onClick={handleSubmit}
+          className="bg-blue w-2/3 h-10 rounded-full text-white font-semibold shadow-lg ">
           Rent Car
         </button>
       </form>
