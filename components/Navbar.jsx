@@ -70,15 +70,7 @@ export default function NavBar() {
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 {/* Profile dropdown */}
-                <Menu as="div" className="relative ml-3">
-                  <Menu.Button className="flex rounded-full bg-gray-800 text-sm ">
-                    <Image
-                      className="h-8 w-8 rounded-full"
-                      src={star_rental}
-                      alt="Profile"
-                    />
-                  </Menu.Button>
-                </Menu>
+                <Menu as="div" className="relative ml-3"></Menu>
               </div>
             </div>
           </div>
