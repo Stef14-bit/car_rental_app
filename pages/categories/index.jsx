@@ -1,5 +1,4 @@
 import React from "react";
-import { useSession } from "@supabase/auth-helpers-react";
 import Link from "next/link";
 import CategoryCard from "@/components/CategoryCard";
 import suv from "../../assets/suv.jpg";
@@ -10,10 +9,8 @@ import old from "../../assets/old.jpg";
 import luxury from "../../assets/luxury.jpg";
 
 function CarSearch() {
-  const session = useSession();
-
   return (
-    <div className="flex flex-col justify-center content-center mx-5">
+    <main className="flex flex-col justify-center  mx-5">
       <h2 className="text-3xl my-5  text-gray-600">
         What type of car are you looking for ?
       </h2>
@@ -22,7 +19,7 @@ function CarSearch() {
         href="categories/car-list">
         All Cars
       </Link>
-      <div className="grid grid-cols-2 gap-4 justify-items-center align-items-center h-full my-5 ">
+      <section className="grid grid-cols-2 gap-4 justify-items-center">
         <CategoryCard categoryImg={suv} category={"SUV"} page={"suv"} />
         <CategoryCard categoryImg={sedan} category={"Sedan"} page={"sedan"} />
         <CategoryCard categoryImg={sport} category={"Sport"} page={"sport"} />
@@ -37,8 +34,8 @@ function CarSearch() {
           category={"Luxury"}
           page={"luxury"}
         />
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
 
