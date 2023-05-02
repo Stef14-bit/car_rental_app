@@ -14,12 +14,12 @@ function Oldtimer() {
       <div className="flex justify-around m-5 p-5 ">
         {" "}
         <Link
-          className="bg-teal-600 p-1 rounded-md text-white"
+          className="bg-blue p-1 rounded-md text-white"
           href="/categories/car-list">
           All cars
         </Link>
         <Link
-          className="bg-teal-600 p-1 rounded-md text-white"
+          className="bg-blue p-1 rounded-md text-white"
           href={"/categories"}>
           Back to categories
         </Link>
