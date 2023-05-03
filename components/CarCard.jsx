@@ -28,7 +28,6 @@ const CarCard = ({
         <button
           className="bg-gradient-to-tr from-sky-900 via-sky-600 to-green-800 h-10 my-5 rounded-md"
           onClick={onClick}>
-          {" "}
           Rent
         </button>
       </div>
