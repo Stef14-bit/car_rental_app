@@ -63,7 +63,7 @@ export default function Avatar({ uid, url, onUpload }) {
         )}
       </div>
 
-      <div className="p-2  bg-blue text-white rounded-md text-center">
+      <div className="p-2  bg-gradient-to-tr from-sky-900 via-sky-600 to-green-800 text-white rounded-md text-center">
         <label htmlFor="single">
           {uploading ? "Uploading ..." : "Upload Profile picture"}
         </label>

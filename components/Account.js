@@ -89,7 +89,7 @@ export default function Account({ session }) {
       </div>
       <div>
         <div
-          className="p-2 text-center my-2 bg-blue text-white rounded-md"
+          className="p-2 text-center my-2 bg-gradient-to-tr from-sky-900 via-sky-600 to-green-800 text-white rounded-md"
           onClick={() => updateProfile({ username, website, avatar_url })}
           disabled={loading}>
           {loading ? "Loading ..." : "Update Profile"}

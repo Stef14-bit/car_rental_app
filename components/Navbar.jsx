@@ -21,11 +21,11 @@ export default function NavBar() {
     <Disclosure as="nav" className="">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div className="w-full sm:px-6 lg:px-8 bg-gradient-to-tr from-sky-900 via-sky-600 to-green-800 shadow-2xl shadow-sky-900">
             <div className="relative  flex h-16 items-center justify-between ">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden ">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-blue hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-bg-gradient-to-tr from-sky-900 via-sky-600 to-green-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -70,15 +70,7 @@ export default function NavBar() {
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 {/* Profile dropdown */}
-                <Menu as="div" className="relative ml-3">
-                  <Menu.Button className="flex rounded-full bg-gray-800 text-sm ">
-                    <Image
-                      className="h-8 w-8 rounded-full"
-                      src={star_rental}
-                      alt="Profile"
-                    />
-                  </Menu.Button>
-                </Menu>
+                <Menu as="div" className="relative ml-3"></Menu>
               </div>
             </div>
           </div>
