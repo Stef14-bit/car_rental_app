@@ -27,7 +27,7 @@ function rentPage() {
           id="from"
           value={startDate}
           onChange={(e) => handleInputChange(e)}
-          className="h-12 w-full rounded-md text-center bg-blue text-white font text-lg mb-4"
+          className="h-12 w-full rounded-md text-center bg-gradient-to-tr from-sky-900 via-sky-600 to-green-800 text-white font text-lg mb-4"
           type="date"
         />
         <label htmlFor="to">To</label>
@@ -35,14 +35,14 @@ function rentPage() {
           id="to"
           value={endDate}
           onChange={(e) => handleInputChange(e)}
-          className="h-12 w-full rounded-md text-center bg-blue text-slate-50 font text-lg"
+          className="h-12 w-full rounded-md text-center bg-gradient-to-tr from-sky-900 via-sky-600 to-green-800 text-slate-50 font text-lg"
           type="date"
         />
 
         <button
           type="Submit"
           onClick={handleSubmit}
-          className="bg-blue w-2/3 h-10 rounded-full text-white font-semibold shadow-lg ">
+          className="bg-gradient-to-tr from-sky-900 via-sky-600 to-green-800 w-2/3 h-10 rounded-full text-white font-semibold shadow-lg ">
           Rent Car
         </button>
       </form>

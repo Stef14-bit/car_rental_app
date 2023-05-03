@@ -30,7 +30,7 @@ const CarCard = ({
         Starting from {price} € / Day
       </h3>
       <Link href="/rentPage" className="flex justify-center">
-        <button className="bg-blue w-2/3 h-10 rounded-full text-white font-semibold  mb-4 shadow-lg">
+        <button className="bg-gradient-to-tr from-sky-900 via-sky-600 to-green-800 w-2/3 h-10 rounded-full text-white font-semibold  mb-4 shadow-lg">
           Rent
         </button>
       </Link>

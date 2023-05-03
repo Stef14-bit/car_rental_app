@@ -15,7 +15,7 @@ function CarSearch() {
         What type of car are you looking for ?
       </h2>
       <Link
-        className="bg-blue p-1 rounded-md text-white text-center w-2/6 self-center my-8 "
+        className="bg-gradient-to-tr from-sky-900 via-sky-600 to-green-800 p-1 rounded-md text-white text-center w-2/6 self-center my-8 "
         href="categories/car-list">
         All Cars
       </Link>

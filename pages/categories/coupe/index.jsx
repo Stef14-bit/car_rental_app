@@ -13,12 +13,12 @@ function Coupe() {
       <div className="flex justify-around m-5 p-5 ">
         {" "}
         <Link
-          className="bg-blue p-1 rounded-md text-white"
+          className="bg-gradient-to-tr from-sky-900 via-sky-600 to-green-800 p-1 rounded-md text-white"
           href="/categories/car-list">
           All cars
         </Link>
         <Link
-          className="bg-blue p-1 rounded-md text-white"
+          className="bg-gradient-to-tr from-sky-900 via-sky-600 to-green-800 p-1 rounded-md text-white"
           href={"/categories"}>
           Back to categories
         </Link>
