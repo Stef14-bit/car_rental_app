@@ -5,7 +5,7 @@ import sport from "../assets/sport.jpg";
 import coupe from "../assets/coupe.jpg";
 import old from "../assets/old.jpg";
 import luxury from "../assets/luxury.jpg";
-import herocar from "../assets/heroCar.jpg";
+
 const Home = () => {
   return (
     <div className="flex flex-col h-full ">
