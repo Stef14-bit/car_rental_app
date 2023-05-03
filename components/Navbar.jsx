@@ -21,7 +21,7 @@ export default function NavBar() {
     <Disclosure as="nav" className="">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div className="w-full sm:px-6 lg:px-8 bg-gradient-to-tr from-sky-900 via-sky-600 to-green-800 shadow-2xl shadow-sky-900">
             <div className="relative  flex h-16 items-center justify-between ">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden ">
                 {/* Mobile menu button*/}

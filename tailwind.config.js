@@ -27,6 +27,9 @@ module.exports = {
     },
 
     extend: {
+      backgroundImage: {
+        hero: "url('../assets/heroCar.jpg')",
+      },
       colors: {
         darkGray: "#595959",
         gray: "#DBD2CD",
