@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { useSession } from "@supabase/auth-helpers-react";
 import useQuery from "@/hooks/useQuery";
 import Link from "next/link";
-import RentPage from "@/components/RentPage";
 
 const CarList = () => {
   const { data, error, status } = useQuery("cars", "*");
@@ -54,14 +53,6 @@ const CarList = () => {
           />
         </div>
       ))}
-
-      {selectedCar && (
-        <div
-          onClick={() => setSelectedCar(null)}
-          className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-50">
-          <RentPage carData={selectedCar} onClose={handleCloseRentPage} />
-        </div>
-      )}
     </div>
   );
 };
