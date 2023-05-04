@@ -1,6 +1,8 @@
 import React from "react";
+import Link from "next/link";
 
 const CarCard = ({
+  id,
   category,
   carImage,
   make,
@@ -14,7 +16,9 @@ const CarCard = ({
 }) => {
   return (
     <div className="flex flex-col w-72 border m-5 rounded-md shadow-lg hover:shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105">
-      <img className="h-48 w-full object-cover" src={carImage} alt="car" />
+      <Link href={`/cars/${id}`}>
+        <img className="h-48 w-full object-cover" src={carImage} alt="car" />
+      </Link>
       <div className="flex flex-col p-5">
         <h2 className="text-xl font-semibold mb-2">
           {make} {model}
@@ -25,11 +29,11 @@ const CarCard = ({
         <p>Doors: {doors}</p>
         <p>Horsepower: {horsepower}</p>
         <p>Price: {price} $/day</p>
-        <button
-          className="bg-gradient-to-tr from-sky-900 via-sky-600 to-green-800 h-10 my-5 rounded-md"
-          onClick={onClick}>
-          Rent
-        </button>
+        <Link href={`/rent-page/${id}`}>
+          <button className="bg-gradient-to-tr from-sky-900 via-sky-600 to-green-800 h-10 my-5 rounded-md">
+            Rent
+          </button>
+        </Link>
       </div>
     </div>
   );
