@@ -6,16 +6,7 @@ import Link from "next/link";
 
 const CarList = () => {
   const { data, error, status } = useQuery("cars", "*");
-  const [selectedCar, setSelectedCar] = useState(null);
   const session = useSession();
-
-  const handleCarClick = (carData) => {
-    setSelectedCar(carData);
-  };
-
-  const handleCloseRentPage = () => {
-    setSelectedCar(null);
-  };
 
   if (status === "loading") {
     return <h3>Loading ...</h3>;
@@ -49,7 +40,6 @@ const CarList = () => {
             doors={e.doors}
             horsepower={e.horsepower}
             price={e.price}
-            onClick={() => handleCarClick(e)}
           />
         </div>
       ))}
