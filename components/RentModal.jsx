@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { useRouter } from "next/router";
 
 const RentModal = ({
   showModal,
@@ -18,6 +19,7 @@ const RentModal = ({
 }) => {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
+  const router = useRouter();
 
   const handleStartDateChange = (date) => {
     setStartDate(date);
@@ -31,7 +33,8 @@ const RentModal = ({
     handleModalClose();
   };
   const handleRentClick = () => {
-    // Do something with the selected date range
+    const queryParams = `?startDate=${startDate.toISOString()}&endDate=${endDate.toISOString()}`;
+    router.push(`/rent-page/${queryParams}`);
   };
 
   return (
