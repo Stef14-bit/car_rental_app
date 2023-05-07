@@ -1,38 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Star Rentals Project Readme
 
-## Getting Started
+Star Rentals is a car rental application that allows users to book and rent cars for a specific period. This project is built with Next.js and styled with Tailwind CSS. It also uses several additional libraries to enhance the user experience and functionality of the application.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- User login:
+  Users can create an account or log in with an existing one to access the app's functionality.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- User profile editing:
+  Users can edit their profile data, including uploading or updating an existing profile avatar.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Car booking:
+  Users can browse through a selection of available cars and book them for specific dates and times.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Admin login (coming soon):
+  An upcoming feature that will allow admins to log in with special access to insert, delete, or put cars on hold for maintenance or repairs. This feature will help keep the car rental service running smoothly and ensure that vehicles are always available for users to book.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Libraries Used
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- The following are the libraries used in this project:
 
-## Learn More
+       - fontawesome/fontawesome-svg-core:
+        A library that provides scalable vector icons that can be customized with CSS to match the project's design.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+       - react-datepicker:
+        A customizable date picker component for React.
+       - react-dom:
+        A package that provides DOM-specific methods that can be used at the top level of a web application to manipulate the DOM tree.
+       - react-icons:
+        A library that provides a set of free and open-source icons for React projects.
+       - supabase/auth-helpers-nextjs:
+        A library that provides utilities for working with authentication and authorization in Next.js projects.
+       - supabase/auth-helpers-react:
+        A library that provides utilities for working with authentication and authorization in React projects.
+       - supabase/auth-ui-react:
+        A library that provides pre-built UI components for authentication and authorization in React projects.
+       - supabase/supabase-js:
+        A client library for working with the Supabase backend service.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+The project is deployed on Vercel and can be accessed using the following link : [Star Rentals](https://car-rentalapp.vercel.app/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Conclusion
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Star Rentals is a fully functional car rental application built with Next.js, styled with Tailwind CSS, and enhanced with several libraries. It provides a smooth user experience and easy car booking process. With upcoming admin login, the project will become even more versatile and feature-rich.
