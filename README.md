@@ -41,7 +41,7 @@ Star Rentals is a car rental application that allows users to book and rent cars
 
 ## Deployment
 
-The project is deployed on Vercel and can be accessed using the following link : [Star Rentals](https://car-rentalapp.vercel.app/)
+The project is deployed on Vercel and can be accessed using the following link : [Star Rentals](https://star-rentals.vercel.app/)
 
 ## Conclusion
 
