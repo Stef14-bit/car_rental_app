@@ -46,3 +46,7 @@ The project is deployed on Vercel and can be accessed using the following link :
 ## Conclusion
 
 Star Rentals is a fully functional car rental application built with Next.js, styled with Tailwind CSS, and enhanced with several libraries. It provides a smooth user experience and easy car booking process. With upcoming admin login, the project will become even more versatile and feature-rich.
+
+## Credits
+
+Images from Unsplash, Icons from fontawesome
