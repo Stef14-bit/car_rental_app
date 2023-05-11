@@ -22,21 +22,6 @@ const Home = () => {
         <SpecialOfferCard />
         <SpecialOfferCard />
         <SpecialOfferCard />
-
-        {/* <CategoryCard categoryImg={suv} category={"SUV"} page={"suv"} />
-        <CategoryCard categoryImg={sedan} category={"Sedan"} page={"sedan"} />
-        <CategoryCard categoryImg={sport} category={"Sport"} page={"sport"} />
-        <CategoryCard categoryImg={coupe} category={"Coupe"} page={"coupe"} />
-        <CategoryCard
-          categoryImg={old}
-          category={"Oldtimer"}
-          page={"oldtimer"}
-        />
-        <CategoryCard
-          categoryImg={luxury}
-          category={"Luxury"}
-          page={"luxury"}
-        /> */}
       </main>
     </div>
   );
