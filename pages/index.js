@@ -1,10 +1,3 @@
-import CategoryCard from "@/components/CategoryCard";
-import suv from "../assets/suv.jpg";
-import sedan from "../assets/sedan.jpg";
-import sport from "../assets/sport.jpg";
-import coupe from "../assets/coupe.jpg";
-import old from "../assets/old.jpg";
-import luxury from "../assets/luxury.jpg";
 import SpecialOfferCard from "@/components/SpecialOfferCard";
 
 const Home = () => {
