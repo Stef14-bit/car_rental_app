@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useRouter } from "next/router";
-import { useSession } from "@supabase/auth";
-import { useSupabaseClient } from "@supabase/supabase-js";
+import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
 
 const RentModal = ({
   showModal,
@@ -22,7 +21,6 @@ const RentModal = ({
   const [endDate, setEndDate] = useState(new Date());
   const router = useRouter();
   const { session } = useSession();
-  const supabase = useSupabaseClient();
 
   const handleStartDateChange = (date) => {
     setStartDate(date);
