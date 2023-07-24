@@ -8,6 +8,14 @@ const Home = () => {
   const supabase = useSupabaseClient();
   const router = useRouter();
 
+  useEffect(() => {
+    if (session) {
+      setTimeout(() => {
+        router.push("/profile");
+      }, 1000);
+    }
+  }, [session, router]);
+
   return (
     <div className="">
       {!session ? (
@@ -20,11 +28,7 @@ const Home = () => {
           />
         </div>
       ) : (
-        useEffect(() => {
-          setTimeout(() => {
-            router.push("/profile");
-          }, 1000);
-        }, [])
+        <div>Redirecting...</div>
       )}
     </div>
   );
