@@ -24,7 +24,7 @@ const Home = () => {
             supabaseClient={supabase}
             appearance={{ theme: ThemeSupa }}
             theme="dark"
-            providers={["facebook", "google", "apple"]}
+            providers={[]}
           />
         </div>
       ) : (
