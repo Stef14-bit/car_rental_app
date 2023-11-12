@@ -1,28 +1,19 @@
-import React from "react";
-import { useSession } from "@supabase/auth-helpers-react";
-import Account from "@/components/Account";
-import Link from "next/link";
+import AuthForm from "../sign-up/index";
 
-function Profile() {
-  const session = useSession();
+export default function Home() {
   return (
-    <div className="h-full flex  justify-center ">
-      <div className="flex justify-center content-center">
-        {!session ? (
-          <h3>
-            Signup to access page
-            <Link href="/sign-up">
-              <button className="bg-lime-600 p-2 rounded-md absolute top-8 right-8">
-                Signup
-              </button>
-            </Link>{" "}
-          </h3>
-        ) : (
-          <Account session={session} />
-        )}
+    <div className="row">
+      <div className="col-6">
+        <h1 className="header">Supabase Auth + Storage</h1>
+        <p className="">
+          Experience our Auth and Storage through a simple profile management
+          example. Create a user profile and upload an avatar image. Fast,
+          simple, secure.
+        </p>
+      </div>
+      <div className="col-6 auth-widget">
+        <AuthForm />
       </div>
     </div>
   );
 }
-
-export default Profile;

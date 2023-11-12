@@ -5,7 +5,7 @@ import RentModal from "./RentModal";
 const CarCard = ({
   id,
   category,
-  carImage,
+  car_image,
   make,
   model,
   rate,
@@ -28,7 +28,7 @@ const CarCard = ({
     <>
       <div className="flex flex-col w-72 border m-5 rounded-md shadow-lg hover:shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105">
         <Link href={`/cars/${id}`}>
-          <img className="h-48 w-full object-cover" src={carImage} alt="car" />
+          <img className="h-48 w-full object-cover" src={car_image} alt="car" />
         </Link>
         <div className="flex flex-col p-5">
           <h2 className="text-xl font-semibold mb-2">
